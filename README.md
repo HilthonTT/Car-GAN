@@ -19,9 +19,13 @@ The Stanford CAR GAN project aims to generate high-quality images of cars using 
 ## Project Structure
 
 ├── src/data/ # The location that the dataset will be downloaded
+
 ├── src/ # Source code for the GAN model
+
 ├── src/models # the pretrained 100 epoch dicts
+
 ├── generated-images/ # Generated images
+
 └── README.md # Project README file
 
 ## Installation
