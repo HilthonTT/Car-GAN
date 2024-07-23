@@ -396,3 +396,10 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+src/keys
+src/.ipynb_checkpoints/
+src/.virtual_documents/
+src/kaggle.json
+src/data/
+src/generated-images
