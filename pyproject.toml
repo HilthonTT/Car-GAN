@@ -23,6 +23,9 @@ notebook = ["jupyter", "ipywidgets"]
 dev = ["pytest>=7"]
 all = ["car-gan[data,video,notebook,dev]"]
 
+[project.scripts]
+car-gan = "car_gan.cli:main"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 
