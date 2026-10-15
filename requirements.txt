@@ -1,0 +1,3 @@
+# Installs the package with every optional extra. For a GPU build of PyTorch,
+# install torch/torchvision first from https://pytorch.org/get-started/locally/
+-e .[all]
