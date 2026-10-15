@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "car-gan"
+version = "1.0.0"
+description = "A DCGAN that generates 64x64 images of cars, trained on the Stanford Cars dataset."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.1",
+    "torchvision>=0.16",
+    "matplotlib>=3.7",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+data = ["opendatasets>=0.1.22"]
+video = ["opencv-python>=4.8"]
+notebook = ["jupyter", "ipywidgets"]
+dev = ["pytest>=7"]
+all = ["car-gan[data,video,notebook,dev]"]
+
+[project.scripts]
+car-gan = "car_gan.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
